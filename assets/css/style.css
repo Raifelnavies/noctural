@@ -1,0 +1,335 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+.bgcs {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.containercs{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover{
+    background-color: #e50914;
+    border-radius: 5px;
+    color: #fff;
+}
+header nav ul li a.active {
+    background-color: #e50914;
+    border-radius: 5px;
+}
+
+/* header */
+
+.main-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.lineup {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.lineup h2 {
+    font-size: 48px;
+    color: #e50914;
+}
+
+.lineup .artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lineup .artist {
+    width: calc(25% - 20px);
+    text-align: center;
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.lineup .artist img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.lineup .artist p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.promo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.promo-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.promo-left, .promo-right {
+    flex: 1;
+}
+
+.promo-left {
+    flex: 2;
+}
+
+.promo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.promo .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.promo .btn:hover {
+    background-color: #b00610;
+}
+
+.tickets {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.tickets h2 {
+    text-align: center;
+}
+
+.tickets .ticket-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tickets .ticket {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.tickets .ticket h3 {
+    margin-top: 0;
+}
+
+.tickets .ticket p {
+    margin: 10px 0;
+}
+
+.tickets .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tickets .btn:hover {
+    background-color: #b00610;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}
+
+/* CSS untuk halaman Information */
+.information {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.information h2 {
+    font-size: 36px;
+    color: #e50914; /* Warna teks Information menjadi merah */
+    margin-bottom: 20px;
+    text-align: center; /* Pastikan judul berada di tengah */
+}
+
+.venue-map, .google-map {
+    margin-bottom: 40px;
+    text-align: center; /* Menambahkan text-align center untuk judul pada masing-masing map */
+}
+
+.venue-map h3, .google-map h3 {
+    font-size: 28px;
+    color: #fff; /* Warna teks Venue Map dan Noctural Fest menjadi putih */
+    margin-bottom: 20px;
+}
+
+.venue-map img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.google-map iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 0;
+}
+
+/* CSS untuk halaman About Us */
+.about-us {
+    background-color: #333; /*buat transparan*/
+    backdrop-filter: blur(60px); /* efek blur */
+    -webkit-backdrop-filter: blur(90px); /* Menambahkan efek blur  */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    color: #e50914;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.ticket-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #BB3747; 
+    width: 260px; 
+    padding: 10px; 
+    border-radius: 20px; 
+    margin-left: 500px;
+}
+
+.ticket-switcher button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #BB3747; /* Sama seperti tombol .btn */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.ticket-switcher button:hover {
+    background-color: #BB3747 /* Sama seperti tombol .btn:hover */
+}
+
+.ticket-switcher button.active {
+    background-color: #000000; /* Sama seperti tombol .btn:hover */
+}
+
+
+.ticket-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.ticket-content .ticket {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.ticket-content .ticket h3 {
+    margin-top: 0;
+}
+
+.ticket-content .ticket p {
+    margin: 10px 0;
+}
+
+.ticket-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ticket-content .btn:hover {
+    background-color: #b00610;
+}
+
+/* akhir style lineup */
