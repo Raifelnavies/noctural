@@ -39,31 +39,31 @@
                 <img src="http://localhost/noctural/assets/images/artist1.jpg" alt="Artist 1">
                 <p>Ethan</p>
             </div>
-            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/9195.jpg" data-name="Alessia">
+            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/9195.jpg" data-name="Alessia" data-desc="Alessia adalah penyanyi dan penulis lagu yang telah mencuri perhatian banyak orang dengan suaranya yang lembut dan lirik-lirik yang mendalam. Dengan gaya musik yang menggabungkan pop dan indie, Alessia berhasil menciptakan lagu-lagu yang tidak hanya catchy tetapi juga bermakna. Penampilannya yang autentik dan sikapnya yang rendah hati membuatnya disukai banyak penggemar di seluruh dunia.">
                 <img src="http://localhost/noctural/assets/images/9195.jpg" alt="Artist 2">
                 <p>Alessia</p>
             </div>
-            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist3.jpg" data-name="Vivian">
+            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist3.jpg" data-name="Vivian" data-desc="Vivian adalah seorang artis dengan suara yang kuat dan penuh emosi. Dia dikenal karena kemampuan vokalnya yang dapat menjangkau berbagai genre musik, dari pop hingga rock. Lagu-lagunya sering kali menceritakan kisah-kisah pribadi yang menyentuh hati, dan penampilan live-nya selalu berhasil menghipnotis penonton. Vivian adalah sosok yang berani dan kreatif, selalu bereksperimen dengan suara dan gaya baru dalam setiap albumnya.">
                 <img src="http://localhost/noctural/assets/images/artist3.jpg" alt="Artist 3">
                 <p>Vivian</p>
             </div>
         </div>
         <div class="artists mb-3">
-            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/17471.jpg" data-name="Ronan">
+            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/17471.jpg" data-name="Ronan" data-desc="Ronan adalah seorang penyanyi yang telah membangun reputasi sebagai salah satu vokalis terbaik di industri musik. Dengan suaranya yang serak dan penuh karakter, Ronan berhasil menghidupkan setiap lagu yang dinyanyikannya. Dia sering menulis sendiri lirik-liriknya, yang biasanya berisi refleksi mendalam tentang kehidupan dan cinta. Konser-konsernya selalu dinanti karena keintiman dan kedekatannya dengan penonton.">
                 <img src="http://localhost/noctural/assets/images/17471.jpg" alt="Artist 4">
                 <p>Ronan</p>
             </div>
-            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist5.jpg" data-name="Elira">
+            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist5.jpg" data-name="Elira" data-desc="Elira adalah seorang bintang muda yang tengah naik daun di dunia musik pop. Dengan suara yang jernih dan penampilan yang selalu memukau, Elira berhasil menarik perhatian banyak orang sejak awal kariernya. Dia dikenal karena lagu-lagunya yang catchy dan video musik yang kreatif. Meskipun masih muda, Elira menunjukkan kedewasaan dalam berkarya dan dedikasi yang tinggi pada musiknya.">
                 <img src="http://localhost/noctural/assets/images/artist5.jpg" alt="Artist 5">
                 <p>Elira</p>
             </div>
-            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist6.jpg" data-name="Ivy">
+            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist6.jpg" data-name="Ivy" data-desc="Ivy adalah penyanyi dan penulis lagu yang memiliki kemampuan luar biasa dalam menciptakan lagu-lagu yang indah dan mendalam. Suaranya yang unik dan penuh perasaan menjadikan setiap penampilannya sangat spesial. Ivy sering menulis tentang pengalaman hidupnya sendiri, menciptakan koneksi emosional yang kuat dengan para pendengarnya. Musiknya yang menggabungkan pop, folk, dan sedikit sentuhan elektronik membuatnya selalu terdengar segar dan inovatif.">
                 <img src="http://localhost/noctural/assets/images/artist6.jpg" alt="Artist 6">
                 <p>Ivy</p>
             </div>
         </div>
         <div class="artists">
-            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist7.jpg" data-name="Jasper">
+            <div class="artist" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="http://localhost/noctural/assets/images/artist7.jpg" data-name="Jasper" data-desc="Jasper adalah penyanyi yang dikenal karena suaranya yang kuat dan gaya musik yang eklektik. Dia tidak takut untuk bereksperimen dengan berbagai genre, dari pop hingga elektronik, menciptakan lagu-lagu yang selalu terdengar baru dan menarik. Penampilannya yang karismatik dan energik di atas panggung membuat setiap konsernya menjadi pengalaman yang tak terlupakan bagi para penggemarnya. Jasper adalah contoh sempurna dari seorang artis yang terus berinovasi dan berkembang dalam kariernya.">
                 <img src="http://localhost/noctural/assets/images/artist7.jpg" alt="Artist 7">
                 <p>Jasper</p>
             </div>

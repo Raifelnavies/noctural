@@ -8,6 +8,7 @@ class Buytiket3day extends CI_Controller {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('user_model');
+        $this->load->model('Tiket3daypass_model'); // Jangan lupa untuk load model Tiket3daypass_model jika belum
     }
 
     public function index()
@@ -39,8 +40,6 @@ class Buytiket3day extends CI_Controller {
 
             $data['kategori'] = $kategori;
             $data['price'] = $price;
-            
-
             $this->load->view('buytiket3day', $data);
         } else {
             // Validasi berhasil, lanjutkan proses penyimpanan data
@@ -81,10 +80,15 @@ class Buytiket3day extends CI_Controller {
                     $this->Tiket3daypass_model->delete_tiket_3day($id);
                 }
 
+                // Set session data for the ticket
+                $this->session->set_userdata('ticket_data', $data);
+
                 $this->session->set_flashdata('pesandaily', 'Tiket Daily Pass berhasil ditambahkan');
                 redirect('cetaktiket');
             } else {
-
+                // Handle ticket not found scenario
+                $this->session->set_flashdata('error', 'Ticket not found.');
+                redirect('buytiket3day');
             }
         }
     }
