@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2024 at 12:29 PM
+-- Generation Time: Jun 27, 2024 at 04:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -52,17 +52,18 @@ CREATE TABLE `tiket3daypass` (
   `id` int(11) NOT NULL,
   `ticketKategori` varchar(128) NOT NULL,
   `price` int(11) NOT NULL,
-  `stok` int(11) NOT NULL
+  `stok` int(11) NOT NULL,
+  `Tanggal` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tiket3daypass`
 --
 
-INSERT INTO `tiket3daypass` (`id`, `ticketKategori`, `price`, `stok`) VALUES
-(1, 'GA-Early Entry', 700000, 50),
-(2, 'General Admission', 1300000, 20),
-(3, 'VIP', 1800000, 10);
+INSERT INTO `tiket3daypass` (`id`, `ticketKategori`, `price`, `stok`, `Tanggal`) VALUES
+(1, 'GA - Early Entry', 1000000, 10, '[\"2024-06-21\",\"2024-06-22\",\"2024-06-23\"]'),
+(2, 'General Admission', 1300000, 10, '[\"2024-06-21\",\"2024-06-22\",\"2024-06-23\"]'),
+(3, 'VIP', 1800000, 10, '[\"2024-06-21\",\"2024-06-22\",\"2024-06-23\"]');
 
 -- --------------------------------------------------------
 
@@ -74,17 +75,18 @@ CREATE TABLE `tiketdailypass` (
   `id` int(11) NOT NULL,
   `ticketKategori` varchar(128) NOT NULL,
   `price` int(128) NOT NULL,
-  `stok` int(128) NOT NULL
+  `stok` int(128) NOT NULL,
+  `Tanggal` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tiketdailypass`
 --
 
-INSERT INTO `tiketdailypass` (`id`, `ticketKategori`, `price`, `stok`) VALUES
-(1, 'GA-Early Entry', 250000, 47),
-(2, 'General Admission', 450000, 20),
-(3, 'VIP', 750000, 10);
+INSERT INTO `tiketdailypass` (`id`, `ticketKategori`, `price`, `stok`, `Tanggal`) VALUES
+(1, 'GA - Early Entry', 250000, 4, '[\"2024-06-21\",\"2024-06-22\",\"2024-06-30\"]'),
+(2, 'General Admission', 450000, 10, '[\"2024-06-21\",\"2024-06-22\",\"2024-06-23\"]'),
+(3, 'VIP', 750000, 10, '[\"2024-06-21\",\"2024-06-22\",\"2024-06-23\"]');
 
 -- --------------------------------------------------------
 
@@ -109,9 +111,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `email`, `NomerTelpon`, `NumberOfTicket`, `TanggalKonser`, `Payment`, `price`, `TicketCategory`) VALUES
-(1, 'Raifelnavies Yuhabfi', 'admin@example.com', '085882835677', 'NF245', 'Day 1', 'Gopay', 250000, 'GA-Early Entry'),
-(2, 'Raifelnavies Yuhabfi', 'admin@example.com', '085882835677', 'NF402', 'Day 1', 'Gopay', 250000, 'GA-Early Entry'),
-(3, 'Raifelnavies Yuhabfi', 'admin@example.com', '085882835677', 'NF537', 'Full Days', 'Gopay', 700000, 'GA-Early Entry');
+(1, 'Raifelnavies Yuhabfi', 'admin@example.com', '085882835677', 'NF011', '2024-06-21', 'Bank', 250000, 'GA - Early Entry');
 
 --
 -- Indexes for dumped tables
@@ -162,13 +162,13 @@ ALTER TABLE `tiket3daypass`
 -- AUTO_INCREMENT for table `tiketdailypass`
 --
 ALTER TABLE `tiketdailypass`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

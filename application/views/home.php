@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <section class="main-banner">
-    <img src="<?= base_url('assets/images/static.jpg'); ?>" alt="Main Banner">
+    <img src="<?= base_url('assets/images/1_.png'); ?>" alt="Main Banner">
 </section>
 
 <section class="lineup">
