@@ -53,6 +53,13 @@
             </div>
 
             <div class="row mb-3">
+                <label for="inputTanggal" class="col-sm-2 col-form-label">Tanggal :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputTanggal" name="Tanggal" value="<?php echo isset($Tanggal) ? $Tanggal : ''; ?>" readonly>
+                </div>
+            </div>
+
+            <div class="row mb-3">
                 <label for="inputPaymentMethod" class="col-sm-2 col-form-label">Payment Method :</label>
                 <div class="col-sm-10">
                     <select class="form-select" aria-label="Default select example" name="payment" required>
@@ -65,7 +72,7 @@
             </div>
 
             <input type="hidden" name="ticket_id" value="<?php echo $ticket_id; ?>">
-            
+
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-danger" type="button">
                     <a href="<?php echo base_url(''); ?>" class="<?php echo $this->uri->segment(1) == '' ? 'active' : ''; ?> nav-link">Back</a>

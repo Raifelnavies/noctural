@@ -30,21 +30,18 @@
                     <input type="email" class="form-control" id="inputEmail" name="email" required>
                 </div>
             </div>
-
             <div class="row mb-3">
                 <label for="inputPhone" class="col-sm-2 col-form-label">Phone Number :</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPhone" name="nomerTelpon" required>
                 </div>
             </div>
-
             <div class="row mb-3">
                 <label for="inputTicketCat" class="col-sm-2 col-form-label">Ticket Category :</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputTicketCat" name="TicketCategory" value="<?php echo isset($kategori) ? $kategori : ''; ?>" readonly>
                 </div>
             </div>
-
             <div class="row mb-3">
                 <label for="inputPrice" class="col-sm-2 col-form-label">Price :</label>
                 <div class="col-sm-10">
@@ -55,11 +52,12 @@
             <div class="row mb-3">
                 <label for="inputTanggal" class="col-sm-2 col-form-label">Tanggal :</label>
                 <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" name="TanggalKonser" required>
-                        <option value="" selected>Pilih Tanggal</option>
-                        <option value="Day 1">Day 1</option>
-                        <option value="Day 2">Day 2</option>
-                        <option value="Day 3">Day 3</option>
+                    <select class="form-select" name="Tanggal">
+                        <?php foreach ($Tanggal as $date): ?>
+                            <option value="<?php echo $date['date']; ?>">
+                                <?php echo $date['formatted']; ?>
+                            </option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>

@@ -1,0 +1,9 @@
+<phpunit bootstrap="C:\xampp\htdocs\noctural\index.php"
+         colors="true"
+         verbose="true">
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

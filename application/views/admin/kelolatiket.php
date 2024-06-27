@@ -23,6 +23,7 @@
                             <th scope="col" style="white-space: nowrap;">Kategori</th>
                             <th scope="col" style="white-space: nowrap;">Harga</th>
                             <th scope="col" style="white-space: nowrap;">Stock</th>
+                            <th scope="col" style="white-space: nowrap;">Tangal Konser</th>
                             <th scope="col" style="white-space: nowrap;">Action</th>
                         </tr>
                     </thead>
@@ -33,6 +34,7 @@
                                 <td><?php echo $t->ticketKategori; ?></td>
                                 <td>Rp. <?php echo $t->price; ?></td>
                                 <td><?php echo $t->stok; ?></td>
+                                <td><?php echo $t->Tanggal; ?></td>
                                 <td style="white-space: nowrap;">
                                     <a href="<?php echo base_url('kelolatiket/edit_tiket_3day/' . $t->id); ?>" class="btn btn-success btn-sm">Edit</a>
                                     <a href="<?php echo base_url('kelolatiket/delete_tiket_3day/' . $t->id); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus tiket ini?');">Hapus</a>
@@ -68,6 +70,7 @@
                             <th scope="col" style="white-space: nowrap;">Kategori</th>
                             <th scope="col" style="white-space: nowrap;">Harga</th>
                             <th scope="col" style="white-space: nowrap;">Stock</th>
+                            <th scope="col" style="white-space: nowrap;">Tanggal</th>
                             <th scope="col" style="white-space: nowrap;">Action</th>
                         </tr>
                     </thead>
@@ -78,6 +81,7 @@
                                 <td><?php echo $t->ticketKategori; ?></td>
                                 <td>Rp. <?php echo $t->price; ?></td>
                                 <td><?php echo $t->stok; ?></td>
+                                <td><?php echo $t->Tanggal; ?></td>
                                 <td style="white-space: nowrap;">
                                     <a href="<?php echo base_url('kelolatiket/edit_tiket_daily/' . $t->id); ?>" class="btn btn-success btn-sm">Edit</a>
                                     <a href="<?php echo base_url('kelolatiket/delete_tiket_daily/' . $t->id); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus tiket ini?');">Hapus</a>
@@ -100,18 +104,32 @@
             </div>
             <div class="modal-body p-4">
                 <form action="<?php echo base_url('kelolatiket/add_tiket_3day'); ?>" method="post">
-                    <div class="mb-3 row">
+                    <div class="mb-3">
                         <label for="tiketkateogir" class="col-form-label">Tiket Kategori</label>
                         <input type="text" name="kategori" class="form-control" id="tiketkateogir">
                     </div>
-                    <div class="mb-3 row">
+
+                    <div class="mb-3">
                         <label for="price" class="col-form-label">Harga</label>
                         <input type="number" name="price" class="form-control" id="price">
                     </div>
-                    <div class="mb-3 row">
+
+                    <div class="mb-3">
                         <label for="stok" class="col-form-label">Stok</label>
                         <input type="number" name="stok" class="form-control" id="stok">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="tanggal_kegiatan" class="form-label">Tanggal Kegiatan</label>
+                        <div id="tanggal-container-edit">
+                            <div class="input-group mb-2">
+                                <input type="date" class="form-control" name="tanggal_kegiatan[]" required>
+                                <button type="button" class="btn btn-danger remove-tanggal" style="margin-left: 10px;">Hapus</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="add-tanggal-edit"><i class="fas fa-plus fa-sm"></i></button>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
@@ -131,18 +149,30 @@
             </div>
             <div class="modal-body p-4">
                 <form action="<?php echo base_url('kelolatiket/add_tiket_daily'); ?>" method="post">
-                    <div class="mb-3 row">
+                    <div class="mb-3">
                         <label for="tiketkateogir" class="col-form-label">Tiket Kategori</label>
                         <input type="text" name="kategori" class="form-control" id="tiketkateogir">
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3">
                         <label for="price" class="col-form-label">Harga</label>
                         <input type="number" name="price" class="form-control" id="price">
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3">
                         <label for="stok" class="col-form-label">Stok</label>
                         <input type="number" name="stok" class="form-control" id="stok">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="add-tanggal" class="form-label">Tanggal Kegiatan</label>
+                        <div id="tanggal-container">
+                            <div class="input-group mb-2">
+                                <input type="date" class="form-control" name="tanggal_kegiatan[]" required>
+                                <button type="button" class="btn btn-danger remove-tanggal" style="margin-left: 10px;">Hapus</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="add-tanggal"><i class="fas fa-plus fa-sm"></i></button>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>

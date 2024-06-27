@@ -29,7 +29,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" rel="stylesheet">
+ 
 
 </head>
 

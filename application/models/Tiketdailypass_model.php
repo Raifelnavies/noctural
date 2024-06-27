@@ -37,4 +37,19 @@ class Tiketdailypass_model extends CI_Model
         return $this->db->delete('Tiketdailypass');
     }
 
+    public function get_tanggal_kegiatan($ticket_id)
+    {
+        $this->db->select('Tanggal');
+        $this->db->from('Tiketdailypass');
+        $this->db->where('id', $ticket_id);
+        $query = $this->db->get();
+
+        // Ambil semua data tanggal
+        $result = $query->result_array();
+        $tanggal_kegiatan = array_column($result, 'Tanggal');
+
+        // Decode JSON string menjadi array tanggal
+        return json_decode($tanggal_kegiatan[0], true);
+    }
+
 }

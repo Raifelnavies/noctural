@@ -151,6 +151,14 @@
         </div>
         <img src="http://localhost/noctural/assets/images/barcode.png" alt="Barcode" class="barcode" width="95px">
     </div>
+    <div class="ticket" style="margin-top: 10px;">
+        <p>NOTE : 
+            <br>Lanjutkan Pembayaran menggunakan Virtual Account yang telah di kirimkan melalui Email</br>
+            <br>simpan email bukti pembelian sebagai bukti untuk penukaran </br>
+            <br>tempat penukaran tiket akan di buka pada tanggal 20 Juni 2024</br>
+            <br>untuk infomasi lebih lanjut bisa cek Instagram : @NocturalFest</br>
+        </p>
+    </div>
     <button class="home-button">
         <a href="<?php echo base_url(); ?>" style="text-decoration: none; color: white;">Home</a>
     </button>

@@ -67,10 +67,11 @@
                 <h3><?php echo $t->ticketKategori; ?></h3>
                 <p>Presale</p>
                 <p>Start From IDR <?php echo $t->price; ?></p>
-                <a href="<?php echo base_url('buyticket?kategori=' . urlencode($t->ticketKategori) . '&price=' . $t->price . '&ticket_id=' . $t->id); ?>" class="btn">Buy Tickets</a>
+                <a href="<?php echo base_url('Buyticket') . '?kategori=' . urlencode($t->ticketKategori) . '&price=' . $t->price . '&Tanggal_konser=' . urlencode($t->Tanggal) .  '&ticket_id=' . $t->id; ?>" class="btn">Buy Tickets</a>
             </div>
         <?php endforeach; ?>
     </div>
+
 
     <!-- tiket 3 days pass -->
     <div id="three-day-pass" class="ticket-content" style="display:none;">
@@ -80,10 +81,12 @@
                 <h3><?php echo $t->ticketKategori; ?></h3>
                 <p>Presale</p>
                 <p>Start From IDR <?php echo $t->price; ?></p>
-                <a href="<?php echo base_url('Buytiket3day?kategori=' . urlencode($t->ticketKategori) . '&price=' . $t->price . '&ticket_id=' . $t->id); ?>" class="btn">Buy Tickets</a>
+                <a href="<?php echo base_url('Buytiket3day?kategori=' . urlencode($t->ticketKategori) . '&price=' . $t->price . '&Tanggal_konser=' . urlencode($t->Tanggal) . '&ticket_id=' . $t->id); ?>" class="btn">Buy Tickets</a>
             </div>
         <?php endforeach; ?>
     </div>
+
+
 </section>
 <script src="http://localhost/noctural/assets/js/tickets.js"></script>
 

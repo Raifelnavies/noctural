@@ -13,16 +13,57 @@ class Buytiket3day extends CI_Controller {
 
     public function index()
     {
+        $ticket_id = $this->input->get('ticket_id');
         $kategori = $this->input->get('kategori');
         $price = $this->input->get('price');
-        $ticket_id = $this->input->get('ticket_id');
+        $Tanggal_konser = urldecode($this->input->get('Tanggal_konser'));
+
+        // Decode JSON string to PHP array
+        $Tanggal_array = json_decode($Tanggal_konser);
+
+        // If the array is not empty, format the dates
+        if (is_array($Tanggal_array)) {
+            // Extract the year and month from the first date
+            $year = date('Y', strtotime($Tanggal_array[0]));
+            $month = date('F', strtotime($Tanggal_array[0]));
+            $month = $this->translate_month($month); // Translate month to Indonesian
+
+            // Extract the day parts and format them
+            $days = array_map(function($date) {
+                return date('d', strtotime($date));
+            }, $Tanggal_array);
+
+            $formatted_date = implode(",", $days) . " - " . $month . " - " . $year;
+        } else {
+            $formatted_date = '';
+        }
 
         // Mengirim parameter ke view
+        $data['ticket_id'] = $ticket_id;
         $data['kategori'] = $kategori;
         $data['price'] = $price;
-        $data['ticket_id'] = $ticket_id;
+        $data['Tanggal'] = $formatted_date;
 
         $this->load->view('buytiket3day', $data);
+    }
+
+    private function translate_month($month) {
+        $months = [
+            'January' => 'Januari',
+            'February' => 'Februari',
+            'March' => 'Maret',
+            'April' => 'April',
+            'May' => 'Mei',
+            'June' => 'Juni',
+            'July' => 'Juli',
+            'August' => 'Agustus',
+            'September' => 'September',
+            'October' => 'Oktober',
+            'November' => 'November',
+            'December' => 'Desember'
+        ];
+
+        return $months[$month] ?? $month;
     }
 
     public function buy_ticket3day()
@@ -57,7 +98,7 @@ class Buytiket3day extends CI_Controller {
                 'email' => $this->input->post('email'),
                 'nomerTelpon' => $this->input->post('nomerTelpon'),
                 'NumberOfTicket' => $number_of_ticket,
-                'TanggalKonser' => 'Full Days',
+                'TanggalKonser' => $this->input->post('Tanggal'),
                 'TicketCategory' => $this->input->post('TicketCategory'),
                 'price' => $this->input->post('price'),
                 'payment' => $this->input->post('payment'),

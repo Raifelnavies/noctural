@@ -29,11 +29,15 @@ class Kelolatiket extends CI_Controller {
         $row = $query->row();
         $new_id = $row->id + 1;
 
+        $tanggal_kegiatan = $this->input->post('tanggal_kegiatan');
+        $tanggal_kegiatan_json = json_encode($tanggal_kegiatan);
+
         $data = array(
             'id' => $new_id,
             'ticketKategori' => $this->input->post('kategori'),
             'price' => $this->input->post('price'),
             'stok' => $this->input->post('stok'),
+            'Tanggal' => $tanggal_kegiatan_json
         );
         $this->Tiket3daypass_model->add_tiket_3day($data);
         $this->session->set_flashdata('pesan', 'Tiket 3 Day Pass berhasil ditambahkan');
@@ -47,12 +51,17 @@ class Kelolatiket extends CI_Controller {
         $row = $query->row();
         $new_id = $row->id + 1;
 
+        $tanggal_kegiatan = $this->input->post('tanggal_kegiatan');
+        $tanggal_kegiatan_json = json_encode($tanggal_kegiatan);
+
         $data = array(
             'id' => $new_id,
             'ticketKategori' => $this->input->post('kategori'),
             'price' => $this->input->post('price'),
             'stok' => $this->input->post('stok'),
+            'Tanggal' => $tanggal_kegiatan_json
         );
+        
         $this->Tiketdailypass_model->add_tiket_daily($data);
         $this->session->set_flashdata('pesandaily', 'Tiket Daily Pass berhasil ditambahkan');
         redirect('kelolatiket');
@@ -75,6 +84,7 @@ class Kelolatiket extends CI_Controller {
             'ticketKategori' => $this->input->post('kategori'),
             'price' => $this->input->post('price'),
             'stok' => $this->input->post('stok'),
+            'Tanggal' => $this->input->post('Tanggal_konser'),
         );
         $this->Tiket3daypass_model->update_tiket_3day($id, $data);
         $this->session->set_flashdata('pesan', 'Tiket 3 Day Pass berhasil diubah');

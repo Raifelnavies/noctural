@@ -14,7 +14,7 @@
 
 <div class="container">
         <header>
-            <h1>Noctural Fest</h1>
+            <h1>Noctural Fest 2024</h1>
             <nav>
                 <ul>
                     <!-- <li>
